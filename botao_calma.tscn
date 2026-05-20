@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cugyq5u3fvjba"]
+
+[ext_resource type="Script" uid="uid://cumepav55wriq" path="res://botao_calma.gd" id="1_sul57"]
+
+[node name="BotaoCalma" type="Node" unique_id=1585303738]
+script = ExtResource("1_sul57")
+
+[node name="Button" type="Button" parent="." unique_id=1053464854]
+offset_left = 529.0
+offset_top = 296.0
+offset_right = 734.0
+offset_bottom = 327.0
+text = "SEGURE PARA RESPIRAR..."
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=431483169]
+offset_left = 378.0
+offset_top = 33.0
+offset_right = 838.0
+offset_bottom = 60.0
+
+[node name="Timer" type="Timer" parent="." unique_id=2073078197]
+wait_time = 5.0

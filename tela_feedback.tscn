@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cj6e6tlpfnkuj"]
+
+[ext_resource type="Script" uid="uid://rjd6v2nx008g" path="res://tela_feedback.gd" id="1_dlhf1"]
+
+[node name="TelaFeedback" type="Control" unique_id=545366507]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_dlhf1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=238405684]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 645.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1705249410]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=799493719]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(1, 0.101960786, 1, 1)
+text = "PARABENS!!! Você conseguiu!!!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1259757887]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=146604505]
+layout_mode = 2
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1736366774]
+layout_mode = 2
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1045275188]
+layout_mode = 2
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=71679994]
+layout_mode = 2
+stretch_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1294600678]
+layout_mode = 2
+stretch_mode = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=713501317]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Jogar Novamente"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=467846256]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Sair"

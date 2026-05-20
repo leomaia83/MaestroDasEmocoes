@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://diwth46a17hov"]
+
+[ext_resource type="Script" uid="uid://inmgvg55nuef" path="res://check_in_emocional.gd" id="1_athnd"]
+
+[node name="CheckInEmocional" type="Control" unique_id=1793881924]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -1.0
+offset_right = 4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_athnd")
+
+[node name="Label" type="Label" parent="." unique_id=333625526]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 47.0
+offset_right = 691.0
+offset_bottom = 70.0
+text = "Como está se sentindo hoje?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=213370380]
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 144.0
+offset_right = 863.0
+offset_bottom = 544.0
+
+[node name="Feliz" type="Button" parent="HBoxContainer" unique_id=963931778]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="Bem" type="Button" parent="HBoxContainer" unique_id=119588386]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Entediado" type="Button" parent="HBoxContainer" unique_id=1307878173]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Ansioso" type="Button" parent="HBoxContainer" unique_id=83835144]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Raiva" type="Button" parent="HBoxContainer" unique_id=1098946569]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2

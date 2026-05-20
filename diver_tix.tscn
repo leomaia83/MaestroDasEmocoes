@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dhkmu4dc3r8s"]
+
+[ext_resource type="Script" uid="uid://behank58wh7p2" path="res://diver_tix.gd" id="1_0v5oe"]
+[ext_resource type="Script" uid="uid://bg1cl07hfx8u7" path="res://objeto_arrastavel.gd" id="1_77wca"]
+[ext_resource type="Texture2D" uid="uid://hk7l6v5g6gtd" path="res://assets quest 3/prato.jpg" id="3_2cl35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1exgs"]
+size = Vector2(79, 61.5)
+
+[node name="DiverTIX" type="Node2D" unique_id=578724843]
+script = ExtResource("1_0v5oe")
+
+[node name="ObjetoArrastavel" type="Area2D" parent="." unique_id=1307586637]
+script = ExtResource("1_77wca")
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjetoArrastavel" unique_id=248102720]
+position = Vector2(104.000046, 106.99997)
+scale = Vector2(0.2148437, 0.14160156)
+texture = ExtResource("3_2cl35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjetoArrastavel" unique_id=630291374]
+position = Vector2(64.5, 66.25)
+shape = SubResource("RectangleShape2D_1exgs")
+
+[node name="Destino" type="Area2D" parent="." unique_id=851954554 groups=["destino_correto"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Destino" unique_id=1591087515]
