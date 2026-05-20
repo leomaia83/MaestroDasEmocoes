@@ -16,4 +16,4 @@ func _ao_clicar_na_causa(nome_causa):
 	if Global.humor_do_dia == "Raiva" or Global.humor_do_dia == "Ansioso":
 		Global.mudar_fase("res://botao_calma.tscn")
 	else:
-		Global.mudar_fase("res://diver_tix.tscn")
+		Global.mudar_fase("res://diver_tix.tscn") #comentario
