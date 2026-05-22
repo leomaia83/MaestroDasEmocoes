@@ -3,17 +3,18 @@ extends Node
 var humor_do_dia : String = ""
 var motivo_do_humor : String = ""
 
-# Caminhos exatos das suas cenas
+# Caminhos básicos de interface
 const TELA_CHECKIN = "res://check_in_emocional.tscn"
 const TELA_CAUSAS = "res://causas_humor.tscn"
 const TELA_FEEDBACK = "res://tela_feedback.tscn"
 
-# As 5 cenas exclusivas para cada emoção
+# As 6 rotas exclusivas de minijogos (1 para cada emoção)
 const SCENE_BRAVO = "res://BotaoCalma.tscn"
 const SCENE_ASSUSTADO = "res://ritmo.tscn"
 const SCENE_TRISTE = "res://ajudas.tscn"
 const SCENE_CANSADO = "res://rotina.tscn"
 const SCENE_FELIZ = "res://memoria.tscn"
+const SCENE_ORGULHOSO = "res://termometro.tscn" # A nova emoção adicionada!
 
 const CAMINHO_LOG_CLINICO = "user://historico_emocional_terapeuta.txt"
 
@@ -23,7 +24,7 @@ func mudar_fase(caminho_da_fase: String):
 func definir_proximo_minijogo():
 	salvar_dados_no_historico()
 	
-	# Faz o desvio exato baseado no botão clicado!
+	# Distribuição exata e inteligente para cada um dos 6 botões
 	match humor_do_dia:
 		"Bravo":
 			mudar_fase(SCENE_BRAVO)
@@ -35,6 +36,8 @@ func definir_proximo_minijogo():
 			mudar_fase(SCENE_CANSADO)
 		"Feliz", "Calmo", "Bem":
 			mudar_fase(SCENE_FELIZ)
+		"Orgulhoso":
+			mudar_fase(SCENE_ORGULHOSO)
 		_:
 			mudar_fase(SCENE_FELIZ)
 

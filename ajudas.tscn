@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bm4f2c7q03ung"]
 
+[ext_resource type="Script" uid="uid://b7rypn5psw88p" path="res://ajudas.gd" id="1_is50i"]
+
 [node name="Ajudas" type="Control" unique_id=849480011]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_is50i")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1316125654]
 layout_mode = 0

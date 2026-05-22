@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://de3c5vigicnr6"]
 
+[ext_resource type="Script" uid="uid://c2qwikiod06tn" path="res://termometro.gd" id="1_bwnwt"]
+
 [node name="Termometro" type="Control" unique_id=1737875902]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_bwnwt")
 
 [node name="ContainerNiveis" type="VBoxContainer" parent="." unique_id=1998582273]
 layout_mode = 0

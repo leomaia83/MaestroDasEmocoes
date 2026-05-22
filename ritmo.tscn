@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://drisxr7ua1oh4"]
 
+[ext_resource type="Script" uid="uid://cbn6j7enbvwov" path="res://ritmo.gd" id="1_xv2qi"]
+
 [node name="Ritmo" type="Control" unique_id=365014263]
 layout_mode = 3
 anchors_preset = 0
@@ -7,6 +9,7 @@ offset_left = 184.0
 offset_top = 145.0
 offset_right = 224.0
 offset_bottom = 185.0
+script = ExtResource("1_xv2qi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=990438375]
 layout_mode = 0
