@@ -26,27 +26,31 @@ text = "Como está se sentindo hoje?"
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=213370380]
 custom_minimum_size = Vector2(800, 400)
 layout_mode = 0
-offset_left = 63.0
+offset_left = 119.0
 offset_top = 144.0
-offset_right = 863.0
+offset_right = 1046.0
 offset_bottom = 544.0
 
 [node name="Feliz" type="Button" parent="HBoxContainer" unique_id=963931778]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 200)
 layout_mode = 2
 
-[node name="Bem" type="Button" parent="HBoxContainer" unique_id=119588386]
-custom_minimum_size = Vector2(200, 0)
+[node name="Triste" type="Button" parent="HBoxContainer" unique_id=119588386]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
-[node name="Entediado" type="Button" parent="HBoxContainer" unique_id=1307878173]
-custom_minimum_size = Vector2(200, 0)
+[node name="Bravo" type="Button" parent="HBoxContainer" unique_id=1307878173]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
-[node name="Ansioso" type="Button" parent="HBoxContainer" unique_id=83835144]
-custom_minimum_size = Vector2(200, 0)
+[node name="Assustado" type="Button" parent="HBoxContainer" unique_id=83835144]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
-[node name="Raiva" type="Button" parent="HBoxContainer" unique_id=1098946569]
-custom_minimum_size = Vector2(200, 0)
+[node name="Cansado" type="Button" parent="HBoxContainer" unique_id=1098946569]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Orgulhoso" type="Button" parent="HBoxContainer" unique_id=1327955955]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2

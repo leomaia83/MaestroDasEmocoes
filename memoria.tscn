@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bnjvij804w36n"]
+
+[node name="Memoria" type="Control" unique_id=2105226285]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=464133061]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 4
+
+[node name="Feliz1" type="Button" parent="GridContainer" unique_id=2045498800]
+layout_mode = 2
+
+[node name="Feliz2" type="Button" parent="GridContainer" unique_id=1572038379]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=75262433]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1487513985]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=2052966795]
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=1843492127]
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=176315532]
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=304007322]
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=529912650]
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="GridContainer" unique_id=2099645420]
+layout_mode = 2
+
+[node name="Button11" type="Button" parent="GridContainer" unique_id=684747492]
+layout_mode = 2
+
+[node name="Button12" type="Button" parent="GridContainer" unique_id=621807927]
+layout_mode = 2

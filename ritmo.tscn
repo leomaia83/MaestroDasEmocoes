@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://drisxr7ua1oh4"]
+
+[node name="Ritmo" type="Control" unique_id=365014263]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 145.0
+offset_right = 224.0
+offset_bottom = 185.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=990438375]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -14.0
+offset_right = 99.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=762520718]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1150201577]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1684038413]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="HBoxContainer" unique_id=1531997224]
+layout_mode = 2
+
+[node name="TempoRitmo" type="Timer" parent="." unique_id=227040099]

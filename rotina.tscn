@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://g3a8osar8kie"]
+
+[node name="Rotina" type="Control" unique_id=1095993502]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1063954177]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+
+[node name="Button" type="Button" parent="GridContainer" unique_id=1946459636]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=65615449]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=72896519]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1121915907]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=443169887]
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=535250554]
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=318114011]
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=143773190]
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=1637074320]
+layout_mode = 2
