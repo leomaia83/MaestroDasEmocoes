@@ -1,33 +1,152 @@
 [gd_scene format=3 uid="uid://drisxr7ua1oh4"]
 
 [ext_resource type="Script" uid="uid://cbn6j7enbvwov" path="res://ritmo.gd" id="1_xv2qi"]
+[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="2_xu3rm"]
+[ext_resource type="Texture2D" uid="uid://ce0de8jq5lj6d" path="res://assets quest 3/notaAmarela.png" id="3_nx873"]
+[ext_resource type="Texture2D" uid="uid://biqbts3e81gqp" path="res://assets quest 3/notaAzul.png" id="4_xx8o5"]
+[ext_resource type="Texture2D" uid="uid://dy0l6osuvjqkv" path="res://assets quest 3/notaRoxa.png" id="5_1ukb8"]
+[ext_resource type="Texture2D" uid="uid://b8wla76s4ldln" path="res://assets quest 3/notaVerde.png" id="6_i4pkj"]
+[ext_resource type="AudioStream" uid="uid://b4w5axubsfk7t" path="res://assets quest 3/notaF.mp3" id="7_fxn45"]
+[ext_resource type="AudioStream" uid="uid://b04jst2bde6xq" path="res://assets quest 3/notaG.mp3" id="8_1vcsd"]
+[ext_resource type="AudioStream" uid="uid://7up4qxrpuhwv" path="res://assets quest 3/notaA.mp3" id="9_608tn"]
+[ext_resource type="AudioStream" uid="uid://cpkalelunytv" path="res://assets quest 3/notaC.mp3" id="10_10mv1"]
 
 [node name="Ritmo" type="Control" unique_id=365014263]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 184.0
-offset_top = 145.0
-offset_right = 224.0
-offset_bottom = 185.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_xv2qi")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=990438375]
+[node name="TextureRectFundo" type="TextureRect" parent="." unique_id=1875288255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xu3rm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=915962668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1452455126]
+layout_mode = 2
+
+[node name="LabelTitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1689717948]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Maestro das Emoções"
+horizontal_alignment = 1
+
+[node name="LabelSubtitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=977977763]
+layout_mode = 2
+text = "Repita o ritmo. Ouça a sequência e toque igual"
+horizontal_alignment = 1
+
+[node name="ControlEspacador1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=562276770]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelNotasSequencia" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1202803618]
+custom_minimum_size = Vector2(700, 220)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelNotasSequencia" unique_id=729665843]
 layout_mode = 0
-offset_left = 4.0
-offset_top = -14.0
-offset_right = 99.0
+offset_right = 40.0
 offset_bottom = 40.0
+alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=762520718]
+[node name="Nota1" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelNotasSequencia/HBoxContainer" unique_id=856699324]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1150201577]
+[node name="Nota2" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelNotasSequencia/HBoxContainer" unique_id=1063943348]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1684038413]
+[node name="Nota3" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelNotasSequencia/HBoxContainer" unique_id=1363656069]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 
-[node name="Button4" type="Button" parent="HBoxContainer" unique_id=1531997224]
+[node name="ControlEspacador2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=567216364]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2029910483]
+layout_mode = 2
+alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=238253540]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("3_nx873")
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=96887715]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("4_xx8o5")
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=465105796]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("5_1ukb8")
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=290346831]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("6_i4pkj")
+
+[node name="ControlEspacador3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1534199750]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=669654314]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonVolume" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1245871016]
 layout_mode = 2
 
-[node name="TempoRitmo" type="Timer" parent="." unique_id=227040099]
+[node name="LabelSequencia" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1883490186]
+layout_mode = 2
+text = "Sequencia 1 de 4"
+
+[node name="ControlEspacador4" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1563586569]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonTocarSequencia" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1243982278]
+custom_minimum_size = Vector2(650, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Timer" type="Timer" parent="." unique_id=475078514]
+
+[node name="notaF" type="AudioStreamPlayer2D" parent="." unique_id=1810739498]
+stream = ExtResource("7_fxn45")
+
+[node name="notaG" type="AudioStreamPlayer2D" parent="." unique_id=69248787]
+stream = ExtResource("8_1vcsd")
+
+[node name="notaA" type="AudioStreamPlayer2D" parent="." unique_id=324661694]
+stream = ExtResource("9_608tn")
+
+[node name="Nota4" type="AudioStreamPlayer2D" parent="." unique_id=1511683321]
+stream = ExtResource("10_10mv1")

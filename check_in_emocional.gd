@@ -1,8 +1,8 @@
 extends Control
 
 func _ready():
-	# Conecta todos os botões filhos do HBoxContainer automaticamente
-	for botao in $HBoxContainer.get_children():
+	# Caminho direto a partir da raiz onde o script está anexado
+	for botao in $MarginContainer/VBoxContainer/GridContainer.get_children():
 		botao.pressed.connect(_ao_selecionar_humor.bind(botao.name))
 
 func _ao_selecionar_humor(nome_humor):

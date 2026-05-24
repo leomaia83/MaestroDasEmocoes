@@ -1,22 +1,90 @@
 [gd_scene format=3 uid="uid://cugyq5u3fvjba"]
 
 [ext_resource type="Script" uid="uid://cumepav55wriq" path="res://botao_calma.gd" id="1_sul57"]
+[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="2_yp48n"]
+[ext_resource type="Texture2D" uid="uid://coxsvbe6tfu01" path="res://assets quest 3/minjogoRespirarBotao0.png" id="3_n0cce"]
 
-[node name="BotaoCalma" type="Node" unique_id=1585303738]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yp48n"]
+blend_mode = 3
+
+[node name="BotaoCalma" type="Control" unique_id=1678495272]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_sul57")
 
-[node name="Button" type="Button" parent="." unique_id=1053464854]
-offset_left = 529.0
-offset_top = 296.0
-offset_right = 734.0
-offset_bottom = 327.0
-text = "SEGURE PARA RESPIRAR..."
+[node name="TextureRectFundo" type="TextureRect" parent="." unique_id=1389677918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yp48n")
+stretch_mode = 6
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=431483169]
-offset_left = 378.0
-offset_top = 33.0
-offset_right = 838.0
-offset_bottom = 60.0
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1034871976]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 80
 
-[node name="Timer" type="Timer" parent="." unique_id=2073078197]
-wait_time = 5.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=76299546]
+layout_mode = 2
+
+[node name="LabelTitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=63699692]
+layout_mode = 2
+text = "Respiração da nuvem"
+horizontal_alignment = 1
+
+[node name="LabelSubtitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=309386824]
+layout_mode = 2
+text = "Veja a animação e acompanhe no seu tempo"
+horizontal_alignment = 1
+
+[node name="ControlEspacador1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=268233778]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CentroAnimacao" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1438328608]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VisualCentral" type="TextureButton" parent="MarginContainer/VBoxContainer/CentroAnimacao" unique_id=1094101576]
+material = SubResource("CanvasItemMaterial_yp48n")
+layout_mode = 0
+offset_left = -105.0
+offset_top = -16.0
+offset_right = 729.0
+offset_bottom = 820.0
+texture_normal = ExtResource("3_n0cce")
+
+[node name="ControlEspacador2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1485740590]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelPassos" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1700839338]
+layout_mode = 2
+
+[node name="ControlEspacador3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=2051125556]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=404476204]
+layout_mode = 2
+
+[node name="ButtonVerDeNovo" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=527570095]
+layout_mode = 2
+
+[node name="ButtonComecar" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1437799520]
+layout_mode = 2

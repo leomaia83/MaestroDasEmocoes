@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bpdwod0coj1pk" path="res://causas_humor.gd" id="1_iruo2"]
 
-[node name="CausasHumor" type="Control" unique_id=1793995007]
+[node name="CausasHumor" type="Control" unique_id=510350962]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

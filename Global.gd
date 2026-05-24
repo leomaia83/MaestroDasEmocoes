@@ -9,7 +9,7 @@ const TELA_CAUSAS = "res://causas_humor.tscn"
 const TELA_FEEDBACK = "res://tela_feedback.tscn"
 
 # As 6 rotas exclusivas de minijogos (1 para cada emoção)
-const SCENE_BRAVO = "res://BotaoCalma.tscn"
+const SCENE_BRAVO = "res://botao_calma.tscn"
 const SCENE_ASSUSTADO = "res://ritmo.tscn"
 const SCENE_TRISTE = "res://ajudas.tscn"
 const SCENE_CANSADO = "res://rotina.tscn"
@@ -19,7 +19,17 @@ const SCENE_ORGULHOSO = "res://termometro.tscn" # A nova emoção adicionada!
 const CAMINHO_LOG_CLINICO = "user://historico_emocional_terapeuta.txt"
 
 func mudar_fase(caminho_da_fase: String):
-	get_tree().change_scene_to_file(caminho_da_fase)
+	print("Global: Tentando mudar para a fase: ", caminho_da_fase)
+	
+	if caminho_da_fase == "" or caminho_da_fase == null:
+		print("ERRO GLOBAL: O caminho enviado está vazio ou nulo!")
+		return
+
+	var erro = get_tree().change_scene_to_file(caminho_da_fase)
+	
+	if erro != OK:
+		print("ERRO GLOBAL: Falha ao carregar a cena! Código do erro: ", erro)
+		print("Verifique se o arquivo existe e se não tem nenhum script quebrado dentro dele.")
 
 func definir_proximo_minijogo():
 	salvar_dados_no_historico()

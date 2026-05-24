@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7up4qxrpuhwv"
+path="res://.godot/imported/notaA.mp3-98e4997394c2b5dee1eaeff577b06515.mp3str"
+
+[deps]
+
+source_file="res://assets quest 3/notaA.mp3"
+dest_files=["res://.godot/imported/notaA.mp3-98e4997394c2b5dee1eaeff577b06515.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,32 +1,121 @@
 [gd_scene format=3 uid="uid://bm4f2c7q03ung"]
 
 [ext_resource type="Script" uid="uid://b7rypn5psw88p" path="res://ajudas.gd" id="1_is50i"]
+[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="2_aysar"]
+[ext_resource type="Texture2D" uid="uid://mo38e8xdydy5" path="res://assets quest 3/mae.png" id="3_bqqxl"]
+[ext_resource type="Texture2D" uid="uid://dowt0r5nnncxj" path="res://assets quest 3/pai.png" id="4_qu1cn"]
+[ext_resource type="Texture2D" uid="uid://cfw0ayvnr00fh" path="res://assets quest 3/professora.png" id="5_xufix"]
+[ext_resource type="Texture2D" uid="uid://bvhkffwmlacup" path="res://assets quest 3/amigo.png" id="6_coc4d"]
+[ext_resource type="Texture2D" uid="uid://1ifi2mx8hh0k" path="res://assets quest 3/terapeuta.png" id="7_qlm3v"]
+[ext_resource type="Texture2D" uid="uid://dog0cgjn4ynmb" path="res://assets quest 3/saudade.png" id="8_pdr4p"]
+[ext_resource type="Texture2D" uid="uid://d0j81pdbondr7" path="res://assets quest 3/abraco.png" id="9_kwiuk"]
+[ext_resource type="Texture2D" uid="uid://d0fs4qp500363" path="res://assets quest 3/tarefa.png" id="10_tikwv"]
+[ext_resource type="Texture2D" uid="uid://vb2mdjfmrw5x" path="res://assets quest 3/brincar.png" id="11_kj6ba"]
+[ext_resource type="Texture2D" uid="uid://b4uhmqwrh6sc5" path="res://assets quest 3/irritado.png" id="12_0sew1"]
 
 [node name="Ajudas" type="Control" unique_id=849480011]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_is50i")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1316125654]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_aysar")
+
+[node name="ContainerSituacoes" type="GridContainer" parent="." unique_id=1257634870]
+custom_minimum_size = Vector2(900, 500)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 170.0
+offset_top = 133.0
+offset_right = 1486.0
+offset_bottom = 1049.0
+columns = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1446662768]
+[node name="BtnSaudade" type="Button" parent="ContainerSituacoes" unique_id=640882191]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("8_pdr4p")
+icon_alignment = 1
+
+[node name="BtnAbraco" type="Button" parent="ContainerSituacoes" unique_id=57649248]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("9_kwiuk")
+icon_alignment = 1
+
+[node name="BtnTarefa" type="Button" parent="ContainerSituacoes" unique_id=1387830561]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("10_tikwv")
+icon_alignment = 1
+
+[node name="BtnBrincar" type="Button" parent="ContainerSituacoes" unique_id=744716736]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("11_kj6ba")
+icon_alignment = 1
+
+[node name="BtnIrritado" type="Button" parent="ContainerSituacoes" unique_id=709312159]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+icon = ExtResource("12_0sew1")
+icon_alignment = 1
+
+[node name="ContainerApoiadores" type="HBoxContainer" parent="." unique_id=1600976348]
+custom_minimum_size = Vector2(900, 300)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 110.0
+offset_top = 879.0
+offset_right = 1010.0
+offset_bottom = 1194.0
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1725338749]
+[node name="ButtonMae" type="Button" parent="ContainerApoiadores" unique_id=1725338749]
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("3_bqqxl")
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1307566352]
+[node name="ButtonPai" type="Button" parent="ContainerApoiadores" unique_id=1307566352]
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("4_qu1cn")
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1281672742]
+[node name="ButtonProfessora" type="Button" parent="ContainerApoiadores" unique_id=1281672742]
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("5_xufix")
 
-[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1286928591]
+[node name="ButtonAmigo" type="Button" parent="ContainerApoiadores" unique_id=1286928591]
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("6_coc4d")
+
+[node name="ButtonTerapeuta" type="Button" parent="ContainerApoiadores" unique_id=1422229099]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+icon = ExtResource("7_qlm3v")
+
+[node name="LabelProgresso" type="Label" parent="." unique_id=588419924]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 459.0
+offset_top = 721.0
+offset_right = 659.0
+offset_bottom = 771.0
+text = "X apoios de 5"
+
+[node name="ButtonAvancar" type="Button" parent="." unique_id=343560094]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 1780.0
+offset_right = 874.0
+offset_bottom = 1880.0
+text = "AVANÇAR"

@@ -1,56 +1,82 @@
 [gd_scene format=3 uid="uid://diwth46a17hov"]
 
 [ext_resource type="Script" uid="uid://inmgvg55nuef" path="res://check_in_emocional.gd" id="1_athnd"]
+[ext_resource type="Texture2D" uid="uid://c5ejw7iork37q" path="res://assets quest 3/persona.png" id="2_f0edx"]
 
-[node name="CheckInEmocional" type="Control" unique_id=1793881924]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3kcy"]
+atlas = ExtResource("2_f0edx")
+region = Rect2(58.40155, 229.83752, 758.7007, 971.7604)
+
+[node name="CheckInEmocional" type="Control" unique_id=1041314213]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = -1.0
-offset_right = 4.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_athnd")
 
-[node name="Label" type="Label" parent="." unique_id=333625526]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1984913236]
 layout_mode = 0
-offset_left = 471.0
-offset_top = 47.0
-offset_right = 691.0
-offset_bottom = 70.0
+offset_left = -46.0
+offset_top = -39.0
+offset_right = 1125.0
+offset_bottom = 1568.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=929181046]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=333625526]
+layout_mode = 2
 text = "Como está se sentindo hoje?"
+horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=213370380]
-custom_minimum_size = Vector2(800, 400)
-layout_mode = 0
-offset_left = 119.0
-offset_top = 144.0
-offset_right = 1046.0
-offset_bottom = 544.0
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=408617932]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
 
-[node name="Feliz" type="Button" parent="HBoxContainer" unique_id=963931778]
-custom_minimum_size = Vector2(150, 200)
+[node name="Feliz" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=628078205]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 
-[node name="Triste" type="Button" parent="HBoxContainer" unique_id=119588386]
-custom_minimum_size = Vector2(150, 0)
+[node name="Triste" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1403899553]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 
-[node name="Bravo" type="Button" parent="HBoxContainer" unique_id=1307878173]
-custom_minimum_size = Vector2(150, 0)
+[node name="Bravo" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1496416769]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 
-[node name="Assustado" type="Button" parent="HBoxContainer" unique_id=83835144]
-custom_minimum_size = Vector2(150, 0)
+[node name="Assustado" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=145598192]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 
-[node name="Cansado" type="Button" parent="HBoxContainer" unique_id=1098946569]
-custom_minimum_size = Vector2(150, 0)
+[node name="Cansado" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1954788974]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 
-[node name="Orgulhoso" type="Button" parent="HBoxContainer" unique_id=1327955955]
-custom_minimum_size = Vector2(150, 0)
+[node name="Orgulhoso" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=12677649]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
+
+[node name="ControlEspacador1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=850501788]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRectPersonagem" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1131333152]
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_x3kcy")
+expand_mode = 1
+
+[node name="ControlEspacador2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1940753283]
+layout_mode = 2
+size_flags_vertical = 3

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpkalelunytv"
+path="res://.godot/imported/notaC.mp3-429731871577ea446830a5cec3b343e7.mp3str"
+
+[deps]
+
+source_file="res://assets quest 3/notaC.mp3"
+dest_files=["res://.godot/imported/notaC.mp3-429731871577ea446830a5cec3b343e7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
