@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Quest3"
-run/main_scene="uid://diwth46a17hov"
+run/main_scene="uid://8i4ks8xirncm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*uid://c3jmaki2qprid"
+ControleSerial="*uid://c6f2yvdb42a7n"
+CursorVirtual="*uid://dnbg4duk1t1rv"
 
 [display]
 

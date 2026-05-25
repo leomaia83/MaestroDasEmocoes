@@ -1,43 +1,116 @@
 [gd_scene format=3 uid="uid://g3a8osar8kie"]
 
 [ext_resource type="Script" uid="uid://bwns7q4qorj4n" path="res://rotina.gd" id="1_j2x53"]
+[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="2_01nlq"]
+[ext_resource type="PackedScene" uid="uid://bij4vprle6j6u" path="res://etapa_rotina.tscn" id="3_s3kv0"]
+[ext_resource type="PackedScene" uid="uid://dh2cogp7b20p1" path="res://slot_rotina.tscn" id="4_a3xvn"]
+[ext_resource type="Texture2D" uid="uid://cn0kvta3k7548" path="res://assets quest 3/acordar.png" id="4_ungqu"]
+[ext_resource type="Texture2D" uid="uid://bp6mctv1syi7b" path="res://assets quest 3/escovar.png" id="5_mgyey"]
+[ext_resource type="Texture2D" uid="uid://6mma12dgppbb" path="res://assets quest 3/cafe.png" id="6_ve4kk"]
+[ext_resource type="Texture2D" uid="uid://dujbq60se2ogo" path="res://assets quest 3/roupa.png" id="7_d36l4"]
+[ext_resource type="Texture2D" uid="uid://dus2wn162gm2y" path="res://assets quest 3/escola.png" id="8_2onai"]
+[ext_resource type="Texture2D" uid="uid://de1cm5va0n8a4" path="res://assets quest 3/mochila.png" id="9_7gsav"]
+[ext_resource type="Texture2D" uid="uid://32cbn6k4twd5" path="res://assets quest 3/slot1.png" id="11_gn2t7"]
+[ext_resource type="Texture2D" uid="uid://hedv576d6i1g" path="res://assets quest 3/slot2.png" id="12_3bf7y"]
+[ext_resource type="Texture2D" uid="uid://b7jwlv85a47oy" path="res://assets quest 3/slot3.png" id="13_krp6u"]
+[ext_resource type="Texture2D" uid="uid://xyps1skav2q0" path="res://assets quest 3/slot4.png" id="14_lhsaq"]
+[ext_resource type="Texture2D" uid="uid://dyubfnh18xqhw" path="res://assets quest 3/slot5.png" id="15_8k5hp"]
+[ext_resource type="Texture2D" uid="uid://cbvm46fkdnw6y" path="res://assets quest 3/slot6.png" id="16_bv4po"]
 
 [node name="Rotina" type="Control" unique_id=1095993502]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_j2x53")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1063954177]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRectFundo" type="TextureRect" parent="." unique_id=20079218]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_01nlq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=193526857]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.0
+offset_top = -670.0
+offset_right = 446.0
+offset_bottom = 670.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer" unique_id=1689435777]
+layout_mode = 2
 columns = 3
 
-[node name="Button" type="Button" parent="GridContainer" unique_id=1946459636]
+[node name="Acordar" parent="HBoxContainer/GridContainer" unique_id=870383986 instance=ExtResource("3_s3kv0")]
+layout_mode = 2
+imagem_tarefa = ExtResource("4_ungqu")
+
+[node name="Escovar os dentes" parent="HBoxContainer/GridContainer" unique_id=554458292 instance=ExtResource("3_s3kv0")]
+layout_mode = 2
+imagem_tarefa = ExtResource("5_mgyey")
+
+[node name="Tomar café" parent="HBoxContainer/GridContainer" unique_id=1738531802 instance=ExtResource("3_s3kv0")]
+layout_mode = 2
+imagem_tarefa = ExtResource("6_ve4kk")
+
+[node name="Vestir a roupa" parent="HBoxContainer/GridContainer" unique_id=1323597385 instance=ExtResource("3_s3kv0")]
+layout_mode = 2
+imagem_tarefa = ExtResource("7_d36l4")
+
+[node name="Ir para a escola" parent="HBoxContainer/GridContainer" unique_id=955948423 instance=ExtResource("3_s3kv0")]
+layout_mode = 2
+imagem_tarefa = ExtResource("8_2onai")
+
+[node name="Guardar a mochila" parent="HBoxContainer/GridContainer" unique_id=1237221179 instance=ExtResource("3_s3kv0")]
+layout_mode = 2
+imagem_tarefa = ExtResource("9_7gsav")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=137376594]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="GridContainer" unique_id=65615449]
+[node name="SlotRotina" parent="HBoxContainer/VBoxContainer" unique_id=500881227 instance=ExtResource("4_a3xvn")]
 layout_mode = 2
+imagem_slot = ExtResource("11_gn2t7")
 
-[node name="Button3" type="Button" parent="GridContainer" unique_id=72896519]
+[node name="SlotRotina2" parent="HBoxContainer/VBoxContainer" unique_id=1243942314 instance=ExtResource("4_a3xvn")]
 layout_mode = 2
+imagem_slot = ExtResource("12_3bf7y")
 
-[node name="Button4" type="Button" parent="GridContainer" unique_id=1121915907]
+[node name="SlotRotina3" parent="HBoxContainer/VBoxContainer" unique_id=366532750 instance=ExtResource("4_a3xvn")]
 layout_mode = 2
+imagem_slot = ExtResource("13_krp6u")
 
-[node name="Button5" type="Button" parent="GridContainer" unique_id=443169887]
+[node name="SlotRotina4" parent="HBoxContainer/VBoxContainer" unique_id=663525412 instance=ExtResource("4_a3xvn")]
 layout_mode = 2
+imagem_slot = ExtResource("14_lhsaq")
 
-[node name="Button6" type="Button" parent="GridContainer" unique_id=535250554]
+[node name="SlotRotina5" parent="HBoxContainer/VBoxContainer" unique_id=195018016 instance=ExtResource("4_a3xvn")]
 layout_mode = 2
+imagem_slot = ExtResource("15_8k5hp")
 
-[node name="Button7" type="Button" parent="GridContainer" unique_id=318114011]
+[node name="SlotRotina6" parent="HBoxContainer/VBoxContainer" unique_id=1472679025 instance=ExtResource("4_a3xvn")]
 layout_mode = 2
+imagem_slot = ExtResource("16_bv4po")
 
-[node name="Button8" type="Button" parent="GridContainer" unique_id=143773190]
-layout_mode = 2
-
-[node name="Button9" type="Button" parent="GridContainer" unique_id=1637074320]
-layout_mode = 2
+[node name="ButtonVerificar" type="Button" parent="." unique_id=1720474095]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 0
+offset_left = 339.0
+offset_top = 1611.0
+offset_right = 739.0
+offset_bottom = 1691.0
+theme_override_colors/font_color = Color(0.8745098, 0.11764706, 0.8745098, 1)
+theme_override_font_sizes/font_size = 48
+text = "Verificar"

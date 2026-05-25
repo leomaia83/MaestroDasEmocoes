@@ -1,31 +1,13 @@
 extends Control
 
-@onready var container_estrelas = $VBoxContainer/HBoxContainer
+# Certifique-se de conectar os sinais 'pressed()' desses botões no painel "Nó" ao lado do Inspetor!
 
-func _ready():
-	# Começamos com todas as estrelas invisíveis (escala 0)
-	for estrela in container_estrelas.get_children():
-		estrela.scale = Vector2.ZERO
-		estrela.pivot_offset = estrela.size / 2 # Garante que cresçam do centro
-	
-	animar_vitoria()
+func _on_button_jogar_novamente_pressed():
+	print("Reiniciando o jogo...")
+	# Redireciona de volta para a primeira fase do jogo (ex: o check-in emocional ou a memória)
+	Global.mudar_fase("res://check_in_emocional.tscn") 
 
-func animar_vitoria():
-	var tempo_espera = 0.3
-	for estrela in container_estrelas.get_children():
-		# Cria um "Tween" para animar cada estrela
-		var tween = create_tween()
-		tween.set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
-		
-		# Espera um pouquinho antes de mostrar a próxima estrela
-		await get_tree().create_timer(tempo_espera).timeout
-		
-		# Faz a estrela crescer com efeito de mola
-		tween.tween_property(estrela, "scale", Vector2(1, 1), 0.5)
-		# Tocar um som de "Plim!" aqui seria perfeito!
-
-func _on_botao_jogar_novamente_pressed():
-	Global.mudar_fase("res://CheckInEmocional.tscn")
-
-func _on_botao_sair_pressed():
-	get_tree().quit()
+func _on_button_voltar_inicio_pressed():
+	print("Voltando para a tela inicial...")
+	# Redireciona para o menu principal do seu jogo
+	Global.mudar_fase("res://menu_principal.tscn")

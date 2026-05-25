@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://8i4ks8xirncm"]
+
+[ext_resource type="Script" uid="uid://dj2wmncuno2bf" path="res://menu_principal.gd" id="1_gmcsc"]
+[ext_resource type="Texture2D" uid="uid://dukhu3fwpgth" path="res://assets quest 3/capa.jpeg" id="2_ul6ys"]
+
+[node name="MenuPrincipal" type="Control" unique_id=969424562]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmcsc")
+
+[node name="TextureRectFundo" type="TextureRect" parent="." unique_id=181528917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ul6ys")
+
+[node name="ButtonJogar" type="Button" parent="." unique_id=1175771286]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 1394.0
+offset_right = 867.0
+offset_bottom = 1598.0
+flat = true
+
+[node name="ButtonConfiguracoes" type="Button" parent="." unique_id=1179431058]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 1636.0
+offset_right = 803.0
+offset_bottom = 1762.0
+flat = true
+
+[connection signal="pressed" from="ButtonJogar" to="." method="_on_button_jogar_pressed"]
+[connection signal="pressed" from="ButtonConfiguracoes" to="." method="_on_button_configuracoes_pressed"]

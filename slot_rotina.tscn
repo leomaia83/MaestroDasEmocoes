@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dh2cogp7b20p1"]
+
+[ext_resource type="Script" uid="uid://cs3l03yp67pgh" path="res://slot_rotina.gd" id="1_q1c0l"]
+
+[node name="SlotRotina" type="Control" unique_id=500881227]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_q1c0l")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2137964803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

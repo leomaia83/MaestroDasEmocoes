@@ -1,52 +1,108 @@
 [gd_scene format=3 uid="uid://bnjvij804w36n"]
 
 [ext_resource type="Script" uid="uid://bquqr2nl3126r" path="res://memoria.gd" id="1_ksueo"]
+[ext_resource type="Texture2D" uid="uid://bb3dx68k8npp4" path="res://assets quest 3/maestro.jpg" id="2_vw2hi"]
+[ext_resource type="Texture2D" uid="uid://cpne2py6kq35o" path="res://assets quest 3/emojiAssustado.jpg" id="3_qwawc"]
+[ext_resource type="Texture2D" uid="uid://cnsqb21hogqe4" path="res://assets quest 3/emojiBravo.jpg" id="4_et7pa"]
+[ext_resource type="Texture2D" uid="uid://sudnwori2heg" path="res://assets quest 3/emojiCalmo.jpg" id="5_e8evu"]
+[ext_resource type="Texture2D" uid="uid://dbt2bd2ypnhvq" path="res://assets quest 3/emojiFeliz.jpg" id="6_qpex8"]
+[ext_resource type="Texture2D" uid="uid://ne6ax1tjpp6i" path="res://assets quest 3/emojiOrgulhoso.jpg" id="7_2mg0u"]
+[ext_resource type="Texture2D" uid="uid://ckhd42y8435jw" path="res://assets quest 3/emojiTriste.jpg" id="8_g7o5s"]
+[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="9_et7pa"]
 
 [node name="Memoria" type="Control" unique_id=2105226285]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ksueo")
+imagem_verso = ExtResource("2_vw2hi")
+lista_imagens_frente = Array[Texture2D]([ExtResource("3_qwawc"), ExtResource("4_et7pa"), ExtResource("5_e8evu"), ExtResource("6_qpex8"), ExtResource("7_2mg0u"), ExtResource("8_g7o5s")])
+
+[node name="TextureRectFundo" type="TextureRect" parent="." unique_id=947501894]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_et7pa")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=464133061]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.5
+offset_top = -265.0
+offset_right = 357.5
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
 columns = 4
 
-[node name="Feliz1" type="Button" parent="GridContainer" unique_id=2045498800]
+[node name="Carta_0_A" type="Button" parent="GridContainer" unique_id=2045498800]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Feliz2" type="Button" parent="GridContainer" unique_id=1572038379]
+[node name="Carta_0_B" type="Button" parent="GridContainer" unique_id=1572038379]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button3" type="Button" parent="GridContainer" unique_id=75262433]
+[node name="Carta_1_A" type="Button" parent="GridContainer" unique_id=75262433]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button4" type="Button" parent="GridContainer" unique_id=1487513985]
+[node name="Carta_1_B" type="Button" parent="GridContainer" unique_id=1487513985]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button5" type="Button" parent="GridContainer" unique_id=2052966795]
+[node name="Carta_2_A" type="Button" parent="GridContainer" unique_id=2052966795]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button6" type="Button" parent="GridContainer" unique_id=1843492127]
+[node name="Carta_2_B" type="Button" parent="GridContainer" unique_id=1843492127]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button7" type="Button" parent="GridContainer" unique_id=176315532]
+[node name="Carta_3_A" type="Button" parent="GridContainer" unique_id=176315532]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button8" type="Button" parent="GridContainer" unique_id=304007322]
+[node name="Carta_3_B" type="Button" parent="GridContainer" unique_id=304007322]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button9" type="Button" parent="GridContainer" unique_id=529912650]
+[node name="Carta_4_A" type="Button" parent="GridContainer" unique_id=529912650]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button10" type="Button" parent="GridContainer" unique_id=2099645420]
+[node name="Carta_4_B" type="Button" parent="GridContainer" unique_id=2099645420]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button11" type="Button" parent="GridContainer" unique_id=684747492]
+[node name="Carta_5_A" type="Button" parent="GridContainer" unique_id=684747492]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1
 
-[node name="Button12" type="Button" parent="GridContainer" unique_id=621807927]
+[node name="Carta_5_B" type="Button" parent="GridContainer" unique_id=621807927]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+icon_alignment = 1

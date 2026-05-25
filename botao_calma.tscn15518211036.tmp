@@ -44,14 +44,12 @@ layout_mode = 2
 [node name="LabelTitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=63699692]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.0627451, 1, 1)
-theme_override_font_sizes/font_size = 48
 text = "Respiração da nuvem"
 horizontal_alignment = 1
 
 [node name="LabelSubtitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=309386824]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.12941177, 1, 1)
-theme_override_font_sizes/font_size = 48
 text = "Veja a animação e acompanhe no seu tempo"
 horizontal_alignment = 1
 

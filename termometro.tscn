@@ -1,24 +1,80 @@
 [gd_scene format=3 uid="uid://de3c5vigicnr6"]
 
 [ext_resource type="Script" uid="uid://c2qwikiod06tn" path="res://termometro.gd" id="1_bwnwt"]
+[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="2_b8a8j"]
 
 [node name="Termometro" type="Control" unique_id=1737875902]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_bwnwt")
 
-[node name="ContainerNiveis" type="VBoxContainer" parent="." unique_id=1998582273]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRectFundo" type="TextureRect" parent="." unique_id=2124365523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b8a8j")
 
-[node name="Pouco" type="Button" parent="ContainerNiveis" unique_id=59923277]
+[node name="LabelMissao" type="Label" parent="." unique_id=2017796670]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.050980393, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "Missão: Escolha o quanto você está orgulhoso de si mesmo e celebre sua conquista!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ContainerNiveis" type="HBoxContainer" parent="." unique_id=1277801814]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -200.0
+offset_right = 150.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="ContainerNiveis" unique_id=362453965]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+fill_mode = 3
+
+[node name="VSlider" type="VSlider" parent="ContainerNiveis" unique_id=2127637601]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 400)
 layout_mode = 2
 
-[node name="Medio" type="Button" parent="ContainerNiveis" unique_id=2064122335]
-layout_mode = 2
-
-[node name="Muito" type="Button" parent="ContainerNiveis" unique_id=1338772422]
-layout_mode = 2
+[node name="ButtonConfirmar" type="Button" parent="." unique_id=1769248463]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.8745098, 0.0627451, 0.8745098, 1)
+theme_override_font_sizes/font_size = 48
+text = "Confirma"

@@ -106,11 +106,15 @@ icon = ExtResource("7_qlm3v")
 [node name="LabelProgresso" type="Label" parent="." unique_id=588419924]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 0
-offset_left = 459.0
-offset_top = 721.0
-offset_right = 659.0
-offset_bottom = 771.0
+offset_left = 382.0
+offset_top = 708.0
+offset_right = 688.0
+offset_bottom = 775.0
+theme_override_colors/font_color = Color(1, 0.101960786, 1, 1)
+theme_override_font_sizes/font_size = 48
 text = "X apoios de 5"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ButtonAvancar" type="Button" parent="." unique_id=343560094]
 layout_mode = 0
@@ -118,4 +122,6 @@ offset_left = 274.0
 offset_top = 1780.0
 offset_right = 874.0
 offset_bottom = 1880.0
+theme_override_colors/font_color = Color(0.8745098, 0.07450981, 0.8745098, 1)
+theme_override_font_sizes/font_size = 48
 text = "AVANÇAR"

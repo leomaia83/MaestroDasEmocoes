@@ -47,11 +47,15 @@ layout_mode = 2
 [node name="LabelTitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1689717948]
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.8745098, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
 text = "Maestro das Emoções"
 horizontal_alignment = 1
 
 [node name="LabelSubtitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=977977763]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
 text = "Repita o ritmo. Ouça a sequência e toque igual"
 horizontal_alignment = 1
 
@@ -122,9 +126,12 @@ alignment = 1
 
 [node name="ButtonVolume" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1245871016]
 layout_mode = 2
+flat = true
 
 [node name="LabelSequencia" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1883490186]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
 text = "Sequencia 1 de 4"
 
 [node name="ControlEspacador4" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1563586569]
@@ -136,6 +143,8 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(650, 130)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.8745098, 0.05882353, 0.8745098, 1)
+theme_override_font_sizes/font_size = 48
 
 [node name="Timer" type="Timer" parent="." unique_id=475078514]
 

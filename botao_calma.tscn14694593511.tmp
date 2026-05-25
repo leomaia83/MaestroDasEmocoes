@@ -43,15 +43,11 @@ layout_mode = 2
 
 [node name="LabelTitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=63699692]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.0627451, 1, 1)
-theme_override_font_sizes/font_size = 48
 text = "Respiração da nuvem"
 horizontal_alignment = 1
 
 [node name="LabelSubtitulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=309386824]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.12941177, 1, 1)
-theme_override_font_sizes/font_size = 48
 text = "Veja a animação e acompanhe no seu tempo"
 horizontal_alignment = 1
 
@@ -85,11 +81,19 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ButtonVerDeNovo" type="Button" parent="." unique_id=527570095]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -150.0
-offset_bottom = 50.0
-grow_horizontal = 0
-text = "Reiniciar"
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 1030.0
+offset_bottom = 1840.0
+
+[node name="ButtonComecar" type="Button" parent="." unique_id=1437799520]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 866.0
+offset_right = 710.0
+offset_bottom = 966.0
+pivot_offset = Vector2(150, 50)
+theme_override_colors/font_color = Color(0.8745098, 0.34509805, 0.8745098, 1)
+text = "Segure para respirar..."
+flat = true
