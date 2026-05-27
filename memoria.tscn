@@ -50,59 +50,71 @@ columns = 4
 [node name="Carta_0_A" type="Button" parent="GridContainer" unique_id=2045498800]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_0_B" type="Button" parent="GridContainer" unique_id=1572038379]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_1_A" type="Button" parent="GridContainer" unique_id=75262433]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_1_B" type="Button" parent="GridContainer" unique_id=1487513985]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_2_A" type="Button" parent="GridContainer" unique_id=2052966795]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_2_B" type="Button" parent="GridContainer" unique_id=1843492127]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_3_A" type="Button" parent="GridContainer" unique_id=176315532]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_3_B" type="Button" parent="GridContainer" unique_id=304007322]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_4_A" type="Button" parent="GridContainer" unique_id=529912650]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_4_B" type="Button" parent="GridContainer" unique_id=2099645420]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_5_A" type="Button" parent="GridContainer" unique_id=684747492]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 
 [node name="Carta_5_B" type="Button" parent="GridContainer" unique_id=621807927]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
+flat = true
 icon_alignment = 1

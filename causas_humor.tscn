@@ -49,27 +49,41 @@ theme_override_constants/v_separation = 25
 columns = 2
 
 [node name="Casa" type="Button" parent="VBoxContainer/GridContainer" unique_id=768586559]
-custom_minimum_size = Vector2(450, 450)
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
-size_flags_horizontal = 4
+action_mode = 0
 icon = ExtResource("3_rf3tp")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
 [node name="Escola" type="Button" parent="VBoxContainer/GridContainer" unique_id=205316391]
-custom_minimum_size = Vector2(450, 450)
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+action_mode = 0
 icon = ExtResource("4_5a7sw")
+flat = true
+icon_alignment = 1
 expand_icon = true
 
 [node name="Jogos" type="Button" parent="VBoxContainer/GridContainer" unique_id=299736584]
-custom_minimum_size = Vector2(450, 450)
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+action_mode = 0
 icon = ExtResource("5_v10cy")
+flat = true
+icon_alignment = 1
 expand_icon = true
 
 [node name="Pessoas" type="Button" parent="VBoxContainer/GridContainer" unique_id=789778878]
-custom_minimum_size = Vector2(450, 450)
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+action_mode = 0
 icon = ExtResource("6_bp7r4")
+flat = true
+icon_alignment = 1
 expand_icon = true

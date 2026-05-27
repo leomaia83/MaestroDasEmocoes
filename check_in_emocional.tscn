@@ -1,18 +1,7 @@
 [gd_scene format=3 uid="uid://diwth46a17hov"]
 
 [ext_resource type="Script" uid="uid://inmgvg55nuef" path="res://check_in_emocional.gd" id="1_athnd"]
-[ext_resource type="Texture2D" uid="uid://dbt2bd2ypnhvq" path="res://assets quest 3/emojiFeliz.jpg" id="2_ax0j3"]
-[ext_resource type="Texture2D" uid="uid://c5ejw7iork37q" path="res://assets quest 3/persona.png" id="2_f0edx"]
-[ext_resource type="Texture2D" uid="uid://cn6sdv2sjvnrd" path="res://assets quest 3/fundoLimpo.png" id="2_qv46y"]
-[ext_resource type="Texture2D" uid="uid://ckhd42y8435jw" path="res://assets quest 3/emojiTriste.jpg" id="3_qv46y"]
-[ext_resource type="Texture2D" uid="uid://cnsqb21hogqe4" path="res://assets quest 3/emojiBravo.jpg" id="4_fux2y"]
-[ext_resource type="Texture2D" uid="uid://cpne2py6kq35o" path="res://assets quest 3/emojiAssustado.jpg" id="5_ifujq"]
-[ext_resource type="Texture2D" uid="uid://sudnwori2heg" path="res://assets quest 3/emojiCalmo.jpg" id="6_e2n6i"]
-[ext_resource type="Texture2D" uid="uid://ne6ax1tjpp6i" path="res://assets quest 3/emojiOrgulhoso.jpg" id="7_yvswo"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x3kcy"]
-atlas = ExtResource("2_f0edx")
-region = Rect2(58.40155, 229.83752, 758.7007, 971.7604)
+[ext_resource type="Texture2D" uid="uid://dxuoeqcel7qns" path="res://assets quest 3/checkinEmocional.png" id="2_f0edx"]
 
 [node name="CheckInEmocional" type="Control" unique_id=1041314213]
 layout_mode = 3
@@ -30,84 +19,77 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qv46y")
+texture = ExtResource("2_f0edx")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1984913236]
+[node name="Feliz" type="Button" parent="." unique_id=628078205]
+custom_minimum_size = Vector2(500, 130)
 layout_mode = 0
-offset_left = -46.0
-offset_top = -39.0
-offset_right = 1125.0
-offset_bottom = 1568.0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 100
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=929181046]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=333625526]
-layout_mode = 2
-text = "Como está se sentindo hoje?"
-horizontal_alignment = 1
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=408617932]
-custom_minimum_size = Vector2(350, 350)
-layout_mode = 2
+offset_left = 294.0
+offset_top = 424.0
+offset_right = 794.0
+offset_bottom = 554.0
 size_flags_horizontal = 4
-columns = 2
-
-[node name="Feliz" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=628078205]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-text = "FELIZ"
-icon = ExtResource("2_ax0j3")
+focus_neighbor_bottom = NodePath("../Triste")
+flat = true
 icon_alignment = 2
 
-[node name="Triste" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1403899553]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-text = "TRISTE"
-icon = ExtResource("3_qv46y")
-
-[node name="Bravo" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1496416769]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-text = "BRAVO"
-icon = ExtResource("4_fux2y")
-icon_alignment = 2
-
-[node name="Assustado" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=145598192]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-text = "ASSUSTADO"
-icon = ExtResource("5_ifujq")
-
-[node name="Cansado" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1954788974]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-text = "CALMO"
-icon = ExtResource("6_e2n6i")
-icon_alignment = 2
-
-[node name="Orgulhoso" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=12677649]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-text = "ORGULHOSO"
-icon = ExtResource("7_yvswo")
-
-[node name="ControlEspacador1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=850501788]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TextureRectPersonagem" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1131333152]
-clip_contents = true
-custom_minimum_size = Vector2(400, 400)
-layout_mode = 2
+[node name="Triste" type="Button" parent="." unique_id=1403899553]
+custom_minimum_size = Vector2(500, 130)
+layout_mode = 0
+offset_left = 293.0
+offset_top = 580.0
+offset_right = 793.0
+offset_bottom = 710.0
 size_flags_horizontal = 4
-texture = SubResource("AtlasTexture_x3kcy")
-expand_mode = 1
+focus_neighbor_top = NodePath("../Feliz")
+focus_neighbor_bottom = NodePath("../Bravo")
+flat = true
 
-[node name="ControlEspacador2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1940753283]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="Bravo" type="Button" parent="." unique_id=1496416769]
+custom_minimum_size = Vector2(500, 130)
+layout_mode = 0
+offset_left = 292.0
+offset_top = 734.0
+offset_right = 792.0
+offset_bottom = 864.0
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Triste")
+focus_neighbor_bottom = NodePath("../Assustado")
+flat = true
+icon_alignment = 2
+
+[node name="Assustado" type="Button" parent="." unique_id=145598192]
+custom_minimum_size = Vector2(500, 130)
+layout_mode = 0
+offset_left = 291.0
+offset_top = 888.0
+offset_right = 791.0
+offset_bottom = 1018.0
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Bravo")
+focus_neighbor_bottom = NodePath("../Cansado")
+flat = true
+
+[node name="Cansado" type="Button" parent="." unique_id=1954788974]
+custom_minimum_size = Vector2(500, 130)
+layout_mode = 0
+offset_left = 290.0
+offset_top = 1042.0
+offset_right = 790.0
+offset_bottom = 1172.0
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Assustado")
+focus_neighbor_bottom = NodePath("../Orgulhoso")
+flat = true
+icon_alignment = 2
+
+[node name="Orgulhoso" type="Button" parent="." unique_id=12677649]
+custom_minimum_size = Vector2(500, 130)
+layout_mode = 0
+offset_left = 290.0
+offset_top = 1192.0
+offset_right = 790.0
+offset_bottom = 1322.0
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Cansado")
+flat = true
