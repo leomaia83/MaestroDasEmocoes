@@ -1,13 +1,15 @@
 extends Control
 
-# Referências dos contêineres na árvore
+# Referências dos contêineres na árvore (exatamente como no seu original)
 @onready var container_etapas = $HBoxContainer/GridContainer
 @onready var container_slots = $HBoxContainer/VBoxContainer
 @onready var botao_verificar = $ButtonVerificar
 
+# 🔥 Variável de controle para o sistema de drag customizado por hardware
+var etapa_sendo_arrastada: Control = null
+
 # Lógica do Jogo
 const TOTAL_ETAPAS = 6
-# Defina a ordem correta das etapas aqui, mapeando o nome da etapa para a posição (0-5)
 const ORDEM_CORRETA = {
 	"Acordar": 0,
 	"Escovar os dentes": 1,
@@ -18,27 +20,41 @@ const ORDEM_CORRETA = {
 }
 
 func _ready():
-	# Conecta o botão de verificação lá de baixo
-	botao_verificar.pressed.connect(_on_botao_verificar_pressionado)
+	print("Minijogo Rotina Iniciado - Sistema Drag Customizado por Hardware.")
+	
+	# Configura o botão verificar para clique limpo e sem foco automático do teclado
+	if botao_verificar:
+		botao_verificar.focus_mode = Control.FOCUS_NONE
+		botao_verificar.action_mode = BaseButton.ACTION_MODE_BUTTON_PRESS
+		
+		# Limpa conexões duplicadas por segurança e conecta
+		if botao_verificar.pressed.is_connected(_on_botao_verificar_pressionado):
+			botao_verificar.pressed.disconnect(_on_botao_verificar_pressionado)
+		botao_verificar.pressed.connect(_on_botao_verificar_pressionado)
 
 func _on_botao_verificar_pressionado():
 	var acertos = 0
 	
 	# Percorre os slots para verificar a ordem
 	for i in range(TOTAL_ETAPAS):
-		var slot = container_slots.get_child(i)
-		if slot.etapa_no_slot != null:
-			if ORDEM_CORRETA[slot.etapa_no_slot.nome_etapa] == slot.ordem_correta:
-				acertos += 1
-				print("Acertou a etapa ", slot.etapa_no_slot.nome_etapa)
+		if container_slots.get_child_count() > i:
+			var slot = container_slots.get_child(i)
+			if slot.etapa_no_slot != null:
+				var nome = slot.etapa_no_slot.nome_etapa
+				if ORDEM_CORRETA.has(nome) and ORDEM_CORRETA[nome] == slot.ordem_correta:
+					acertos += 1
+					print("Acertou a etapa: ", nome)
+				else:
+					print("Errou a etapa: ", nome)
 			else:
-				print("Errou a etapa ", slot.etapa_no_slot.nome_etapa)
+				print("Slot ", i+1, " está vazio.")
 		else:
-			print("Slot ", i+1, " está vazio.")
+			print("Erro: Nó do Slot ", i+1, " não foi encontrado na árvore.")
 			
 	# Verifica se acertou todas as etapas
 	if acertos == TOTAL_ETAPAS:
 		print("Rotina montada corretamente!")
+		# Remove as travas de cena e avança direto via Global
 		Global.mudar_fase(Global.TELA_FEEDBACK)
 	else:
 		print("Alguma etapa está na ordem errada. Tente novamente!")
